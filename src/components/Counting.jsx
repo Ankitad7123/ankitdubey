@@ -361,7 +361,7 @@ const Counting = ({ onComplete }) => {
           setIsCommandsDone(true);
           clearInterval(commandInterval);
         }
-      }, 10); // Adjust timing to control how fast commands appear
+      }, 1000); // Adjust timing to control how fast commands appear
     }
 
     // Typing effect for the full message after commands are done
