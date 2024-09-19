@@ -23,7 +23,7 @@ const App = () => {
     <div className="App">
       <Router basename='/ankitdubey'>
         <Routes>
-          <Route path="/" element={
+          <Route path="/ankitdubey" element={
             <>
               {showContent && <Navbar />} 
               <div className="content">
