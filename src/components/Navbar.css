@@ -96,7 +96,7 @@
   gap: 15px; /* Space between menu items */
 }
 
-.ls a {
+.ls button {
   font-size: 1.2em;
   font-weight: 900;
   text-decoration: none;
@@ -104,7 +104,7 @@
   transition: color 0.3s;
 }
 
-.ls a:hover {
+.ls button:hover {
   text-decoration: underline; /* Underline on hover */
 }
 
@@ -143,10 +143,16 @@
 
 @media (max-width: 480px) {
   .logo-link {
-    font-size: 1.1em; /* Adjust font size for very small screens */
+    font-size: 1.1em;
+    /* Adjust font size for very small screens */
   }
 
-  .ls a {
-    font-size: 1em; /* Adjust font size for very small screens */
+  .ls button {
+    font-size: 1em;
+  
+/* Adjust font size for very small screens */
+  }
+  .ls{
+    margin-left: -90px;
   }
 }

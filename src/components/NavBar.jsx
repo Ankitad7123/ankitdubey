@@ -68,9 +68,9 @@ const TerminalNavbar = () => {
             {name.slice(0, nameDisplay.length)}
           </a>
           <div className="ls">
-            <a onClick={()=>{navigate("/home")}} style={{ cursor: "pointer", textDecoration: "none", color: "#fdcb01" }}>func Home()</a>
-            <a onClick={()=>{navigate("/about")}} style={{ cursor: "pointer", textDecoration: "none", color: "#06a163" }}>func About()</a>
-            <a onClick={()=>{navigate("/contact")}} style={{ cursor: "pointer", textDecoration: "none", color: "red" }}>func contact()</a>
+            <button onClick={()=>{navigate("/home")}} style={{ cursor: "pointer", textDecoration: "none", color: "#fdcb01" , border:"none" , backgroundColor:"white" , fontFamily:"monospace" }}>func Home()</button>
+            <button onClick={()=>{navigate("/about")}} style={{ cursor: "pointer", textDecoration: "none", color: "#06a163" , border:"none" , backgroundColor:"white", fontFamily:"monospace" }}>func About()</button>
+            <button onClick={()=>{navigate("/contact")}} style={{ cursor: "pointer", textDecoration: "none", color: "red" , border:"none" , backgroundColor:"white" , fontFamily:"monospace"}}>func contact()</button>
           </div>
          
           

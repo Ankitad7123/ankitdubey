@@ -55,6 +55,7 @@ const TechStack = () => {
     backgroundColor: '#000',
     marginTop:"50px",
     borderRadius: '12px',
+    
     padding: '20px',
     boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
     width: windowWidth < 480 ? '90vw' : windowWidth < 768 ? '80vw' : '70vw',
@@ -63,12 +64,13 @@ const TechStack = () => {
     color: '#50fa7b',
     margin: '0 auto',
     position: 'relative',
+    marginLeft:windowWidth < 480 ? "25px":"180px",
   };
 
   const logoGridStyle = {
     display: 'grid',
     gridTemplateColumns: windowWidth < 480 ? 'repeat(auto-fit, minmax(50px, 1fr))' : windowWidth < 768 ? 'repeat(auto-fit, minmax(60px, 1fr))' : 'repeat(auto-fit, minmax(80px, 1fr))',
-    gap: windowWidth < 480 ? '5px' : windowWidth < 768 ? '10px' : '15px',
+    gap: windowWidth < 480 ? '3px' : windowWidth < 768 ? '10px' : '15px',
     justifyItems: 'center',
     alignItems: 'center',
     marginTop: '20px',

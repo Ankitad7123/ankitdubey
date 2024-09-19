@@ -206,6 +206,7 @@ html, body {
   color: #f72d0e; /* Updated color for the message */
   margin-top: 10px;
   width: 80vw;
+  margin: auto;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -407,14 +408,15 @@ html, body {
 
   .terminal2 {
     width: 95vw;
-    height: 47.5vh;
+    margin-left: auto;
+    height: 36.5vh;
     font-size: 10px;
   }
 
   /* Adjust .terminal_big for mobile screens */
   .terminal_big {
     width: 85vw;
-    height: 100vh;
+    height: 65vh;
     font-size: 0.768rem;
     font-weight: 100;
     overflow-x: hidden; /* Further reduce font size */
@@ -426,7 +428,7 @@ html, body {
     border: 2px solid black;
     border-radius: 10px;
     width: 80vw;
-    height: 100vh;
+    height: 63vh;
     margin-top: 0px;
     font-size: 0.768rem;
     font-weight: 100;
@@ -489,9 +491,10 @@ html, body {
     margin-right: 10px;
     z-index: 10; 
     width: 50%;
+    
   }
   .close-buttons2{
-    
+    top: 98px;
     right: -2px;
     position: absolute;
    
