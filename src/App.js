@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename='/ankitdubey'>
         <Routes>
           <Route path="/" element={
             <>
