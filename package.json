@@ -1,9 +1,10 @@
 {
-  "homepage": "https://ankitad7123.github.io/ankitdubey/",
+  
  
   "name": "ankitdubey",
+  "homepage": "https://ankitad7123.github.io/ankitdubey/",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
