@@ -361,7 +361,7 @@ const Counting = ({ onComplete }) => {
           setIsCommandsDone(true);
           clearInterval(commandInterval);
         }
-      }, 1000); // Adjust timing to control how fast commands appear
+      }, 10); // Adjust timing to control how fast commands appear
     }
 
     // Typing effect for the full message after commands are done
@@ -435,7 +435,7 @@ const Counting = ({ onComplete }) => {
       
 
       {isCommandsDone && !isBlackout && (
-        <div className="message" style={{marginTop:"-85px" , color:"red"}}>
+        <div className="message23" style={{marginTop:"-85px" , color:"red"}}>
           <h2>{message3}</h2>
         </div>
       )}
@@ -445,7 +445,7 @@ const Counting = ({ onComplete }) => {
                <div class="terminal-header">
                   
           </div>
-    <div className="terminal2">
+    <div className="terminal23">
        <div class="close-buttons" style={{marginTop:"-10px" , marginLeft:"-10px" , marginBottom:"10px"}}>
             <div class="close-button" data-action="minimize"></div>
                    <div class="close-button" data-action="maximize"></div>

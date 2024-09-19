@@ -60,6 +60,26 @@ html, body {
   position: relative; /* To position the close buttons inside */
 }
 
+
+.terminal23 {
+  margin-top: 50px;
+  font-size: large;
+  gap: 10px;
+  width: 60vw;
+  height: 47vh;
+  background-color: #070000; /* Black background for terminal effect */
+  color: #00ff00; /* Green text color */
+  padding: 20px;
+  border: 2px solid #f7f8f7; /* Green border */
+  border-radius: 10px; /* Rounded corners */
+  font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
+  overflow-y: auto; /* Scrollable if content overflows */
+  white-space: pre-wrap; /* Preserve white space for text formatting */
+  text-align: left; /* Align text to the left */
+  box-shadow: 0 0 15px rgba(250, 252, 250, 0.8); /* Enhanced glow effect */
+  position: relative; /* To position the close buttons inside */
+}
+
 /* Terminal Header and Close Buttons */
 .terminal-header {
   display: flex;
@@ -210,6 +230,16 @@ html, body {
   animation: fadeIn 2s ease-in-out;
 }
 
+.message23 h2 {
+  font-size: 3rem; /* Adjusted size for better visibility */
+  font-weight: 600;
+  color: #f72d0e; /* Updated color for the message */
+  margin-top: 10px;
+  width: 80vw;
+  margin: auto;
+  animation: fadeIn 2s ease-in-out;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -333,6 +363,19 @@ html, body {
     font-size: 0.450rem;
     margin-left: -10px; /* Reduce font size */
   }
+
+  .terminal23 {
+    width: 90vw;
+    height: 50vh;
+    font-size: 0.450rem;
+    margin-left: -10px; /* Reduce font size */
+  }
+
+  .terminal23 pre{
+   
+    margin-left: -15px;
+    font-size: 0.580rem;
+  }
   .terminal2 pre{
    
     margin-left: -15px;
@@ -374,6 +417,10 @@ html, body {
     font-size: 1.8rem; 
     width: 90vw;
   }
+  .message23 h2 {
+    font-size: 1.8rem; 
+    width: 90vw;
+  }
 
   .summary-text {
     font-size: 1.2rem;
@@ -409,6 +456,12 @@ html, body {
   .terminal2 {
     width: 95vw;
     margin-left: auto;
+    height: 36.5vh;
+    font-size: 10px;
+  }
+  .terminal23 {
+    width: 95vw;
+    margin-left: -40px;
     height: 36.5vh;
     font-size: 10px;
   }
@@ -459,6 +512,12 @@ html, body {
   /* Message styling */
   .message h2 {
     margin-top: 50px;
+   
+    font-size: 1.5rem; 
+  }
+  .message23 h2 {
+    margin-top: 50px;
+   margin-left: -40px;
     font-size: 1.5rem; 
   }
 
