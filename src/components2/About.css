@@ -1,0 +1,118 @@
+/* Container for centering the content */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  padding: 10px;
+}
+
+/* Terminal box styling */
+.terminal-box {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  height: auto; /* Adjust height to auto for responsiveness */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  color: #f8f8f2;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+}
+
+/* Close buttons styling */
+.close-buttons {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: flex-start;
+}
+
+.close-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.close-button.red { background-color: #d9534f; }
+.close-button.green { background-color: #4caf50; }
+.close-button.yellow { background-color: #f4c20d; }
+
+/* Terminal body text styling */
+.terminal-body {
+  color: #f8f8f2;
+  font-size: 1.2rem;
+}
+
+.terminal-command {
+  margin: 8px 0;
+  color: #50fa7b;
+  font-weight: bold;
+}
+
+.terminal-link {
+  color: #8be9fd;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 24px;
+  transition: color 0.3s ease;
+}
+
+.terminal-link:hover {
+  color: #ff79c6;
+}
+
+/* Input field styling */
+.input-field {
+  background: none;
+  color: #50fa7b;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #50fa7b;
+  font-family: monospace;
+  padding: 4px 6px;
+  color: #50fa7b;
+  font-weight: bold;
+  border-bottom-color: black;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .terminal-box {
+      padding: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .terminal-body {
+      font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+      padding: 10px;
+  }
+
+  .terminal-box {
+      padding: 15px;
+  }
+
+  .terminal-body {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .terminal-body {
+      font-size: 0.9rem; /* Adjusted from 0.2rem */
+  }
+
+  .input-field {
+      font-size: 0.9rem;
+      padding: 2px 4px;
+  }
+}

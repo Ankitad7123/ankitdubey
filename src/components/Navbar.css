@@ -1,0 +1,152 @@
+/* Terminal style for the navbar */
+.terminal-navbar {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  width: 100vw;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text color */
+  border: 2px solid #eceeec; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  font-family: monospace; /* Terminal-like font */
+  box-shadow: 0 0 10px rgba(249, 251, 249, 0.8); /* Glow effect */
+  overflow: hidden; /* Hide overflow */
+  position: sticky; /* Stick to top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+/* Terminal header with buttons */
+.terminal-header12 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  background: #fefefe; /* Light background */
+  border-bottom: 2px solid #f8faf8; /* Bottom border */
+}
+
+/* Header buttons */
+.header-buttons {
+  display: flex;
+}
+
+.header-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-button[data-action="minimize"] {
+  background-color: #fdcb01; /* Yellow color */
+}
+
+.header-button[data-action="maximize"] {
+  background-color: #0d930d; /* Green color */
+}
+
+.header-button[data-action="close"] {
+  background-color: #cc0000; /* Red color */
+}
+
+.header-button:hover {
+  background-color: #ffffff; /* White color on hover */
+}
+
+/* Terminal body styling */
+.terminal-body12 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding for smaller screens */
+  width: 100%;
+  position: relative; /* Ensure elements are positioned relative to this */
+}
+
+/* Logo styling */
+.terminal-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between; /* Space between logo and menu */
+}
+
+/* Logo link styling */
+.logo-link {
+  color: #000000; /* Black color */
+  text-decoration: none;
+  font-size: 1.3em;
+  font-family: monospace;
+  font-weight: 900;
+  transition: color 0.3s;
+}
+
+.logo-link:hover {
+  color: #06a163; /* Lighter green on hover */
+}
+
+/* Navbar menu */
+.ls {
+  display: flex;
+  flex-direction: row;
+  gap: 15px; /* Space between menu items */
+}
+
+.ls a {
+  font-size: 1.2em;
+  font-weight: 900;
+  text-decoration: none;
+  color: #000000; /* Black color */
+  transition: color 0.3s;
+}
+
+.ls a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .terminal-navbar {
+    flex-direction: column; /* Stack items vertically */
+    height: auto; /* Adjust height */
+  }
+
+  .terminal-body12 {
+    margin-top: -20px;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .terminal-logo {
+    flex-direction: column; /* Stack logo and menu items vertically */
+    align-items: flex-start;
+    margin-left: 90px; /* Align items to the start */
+  }
+
+  .ls {
+    flex-direction: row; 
+    margin-left: -70px;/* Stack menu items vertically */
+    gap: 10px; /* Adjust gap between menu items */
+    width: 100%; /* Full width for smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .logo-link {
+    margin-bottom: 10px; /* Space between logo and menu */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-link {
+    font-size: 1.1em; /* Adjust font size for very small screens */
+  }
+
+  .ls a {
+    font-size: 1em; /* Adjust font size for very small screens */
+  }
+}

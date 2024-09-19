@@ -1,0 +1,57 @@
+/* App.css
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(6, 0, 0);
+  color: rgb(253, 251, 251);
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+ 
+}
+.tech{
+  flex: 1;
+  padding: 100px;
+  margin-top: 10vh;
+  
+
+}
+.tech1{
+  flex: 1;
+  padding: 100px;
+  margin-top: 10vh;
+  margin-bottom: -30vh;
+  
+
+} */
+
+
+/* App.css */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0; /* Ensure the app takes full height */
+}
+
+.content {
+  flex: 1; /* Allow content to grow and fill space */
+  padding: 20px; /* Add padding to the content area */
+}
+
+.tech1, .tech {
+  margin-top: 18vh;
+  margin-bottom: 20px; /* Add margin to create space between sections */
+}
+
+footer {
+  margin-top: 10vh;
+  background-color: #f1f1f1; /* Example background color */
+  padding: 20px; /* Add padding to the footer */
+  text-align: center;
+  margin-bottom:-0px ; /* Center the footer text */
+}

@@ -1,0 +1,189 @@
+/* Flip container styling */
+.flip-container {
+  perspective: 1000px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  z-index: 3; /* Allow height to adjust based on content */
+  margin: 20px 0; /* Add margin to prevent overlap with other elements */
+}
+
+.flipper {
+  position: relative;
+  width:85%;
+  height: auto; /* Allow height to adjust based on content */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-container.flip .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the element's total height */
+}
+
+.front {
+  background: linear-gradient(135deg,   #282c34,  #282c34); /* Education background */
+  color: rgb(15, 14, 14);
+  border: 1px solid #444; /* Adding border */
+  border-radius: 10px; /* Rounded corners for front side */
+}
+
+.back {
+  background: linear-gradient(135deg,  #282c34,  #282c34); /* Certifications background */
+  transform: rotateY(180deg);
+  color: #fdfbfb;
+  border: 1px solid #444; /* Adding border */
+  border-radius: 10px; /* Rounded corners for back side */
+}
+
+button, #btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Education card styling */
+.education-card {
+  background-color: #fff;
+  border: 1px solid #ddd; /* Border for education card */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.education-image {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid #ddd; /* Border around image */
+}
+
+.education-details {
+  flex: 1;
+}
+
+.highlight {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.university {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Certification card styling */
+.certification-card{
+  background-color: #fff;
+  border: 1px solid #ddd; /* Border for certification/internship card */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 60vw;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.internship-card {
+  background-color: #fff;
+  border: 1px solid #ddd; /* Border for certification/internship card */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  color: black;
+  margin-bottom: 20px;
+  width: 50vw;
+}
+
+.cert-logo, .intern-logo {
+  flex-shrink: 0;
+}
+
+.cert-logo img, .intern-logo img {
+  width: 60px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #ddd; /* Border around logo */
+}
+
+.cert-details, .intern-details {
+  flex: 1;
+}
+
+.cert-details h3, .intern-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.cert-details p, .intern-details p {
+  margin: 5px 0;
+}
+
+.credential-link, .certificate-link {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.credential-link:hover, .certificate-link:hover {
+  text-decoration: underline;
+}
+
+/* Fix layout on smaller screens */
+@media (max-width: 768px) {
+  .certification-card, .internship-card, .education-card {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .cert-logo img, .intern-logo img, .education-image {
+    width: 50px;
+  }
+}
+
+.content {
+  color: white;
+}
+
+.ftrc {
+  background-color: grey;
+}

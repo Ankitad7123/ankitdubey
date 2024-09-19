@@ -1,0 +1,133 @@
+/* Container for centering the content */
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+    padding: 10px;
+}
+
+/* Terminal box styling */
+.terminal-box-new {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    height: 50vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    color: #f8f8f2;
+    font-family: "Courier New", Courier, monospace;
+    position: relative;
+}
+
+/* Close buttons styling */
+.terminal-close-buttons-new {
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: flex-start;
+}
+
+.close-button-new {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.close-button-new.red { background-color: #d9534f; }
+.close-button-new.green { background-color: #4caf50; }
+.close-button-new.yellow { background-color: #f4c20d; }
+
+/* Terminal body text styling */
+.terminal-content-new {
+    color: #f8f8f2;
+    font-size: 1rem; /* Adjusted base font size */
+}
+
+.terminal-command-new {
+    margin: 8px 0;
+    color: #50fa7b;
+    font-weight: bold;
+}
+
+.terminal-link-new {
+    color: #8be9fd;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 24px;
+    transition: color 0.3s ease;
+}
+
+.terminal-link-new:hover {
+    color: #ff79c6;
+}
+
+/* Input field styling */
+.input-field-new {
+    background: none;
+    color: #50fa7b;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #50fa7b;
+    font-family: monospace;
+    padding: 4px 6px;
+    color: #50fa7b;
+    font-weight: bold;
+    border-bottom-color: black;
+    font-size: 1rem; /* Adjusted font size for input */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .terminal-content-new {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .terminal-box-new {
+        padding: 15px;
+    }
+
+    .terminal-content-new {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .terminal-box-new {
+        padding: 10px;
+    }
+
+    .terminal-content-new {
+        font-size: 0.9rem;
+    }
+
+    .input-field-new {
+        font-size: 0.890rem;
+        padding: 2px 4px;
+    }
+}
+
+@media (max-width: 576px) {
+    .terminal-content-new {
+        font-size: 0.8rem;
+    }
+
+    .input-field-new {
+        font-size: 0.8rem;
+        padding: 2px 4px;
+    }
+
+    .terminal-close-buttons-new {
+        flex-direction: column;
+    }
+}
+
+.Links{
+    font-size: 12px;
+}
+
