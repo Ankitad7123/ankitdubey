@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css'; // Import the CSS file for styling
+import {useNavigate}  from  "react-router-dom"
 
 const TerminalNavbar = () => {
   const [name, setName] = useState('');
+  const navigate = useNavigate()
  
   const originalName = "ankitdubey@nav-station ~ % lsj";
   const nameDisplay = "ankitdubey@nav-station ~ % ls";
@@ -66,9 +68,9 @@ const TerminalNavbar = () => {
             {name.slice(0, nameDisplay.length)}
           </a>
           <div className="ls">
-            <a href='/home' style={{ cursor: "pointer", textDecoration: "none", color: "#fdcb01" }}>func Home()</a>
-            <a href='/about' style={{ cursor: "pointer", textDecoration: "none", color: "#06a163" }}>func About()</a>
-            <a href='/contact' style={{ cursor: "pointer", textDecoration: "none", color: "red" }}>func contact()</a>
+            <a onClick={()=>{navigate("/home")}} style={{ cursor: "pointer", textDecoration: "none", color: "#fdcb01" }}>func Home()</a>
+            <a onClick={()=>{navigate("/about")}} style={{ cursor: "pointer", textDecoration: "none", color: "#06a163" }}>func About()</a>
+            <a onClick={()=>{navigate("/contact")}} style={{ cursor: "pointer", textDecoration: "none", color: "red" }}>func contact()</a>
           </div>
          
           
