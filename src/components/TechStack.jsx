@@ -4,7 +4,7 @@ const TechStack = () => {
   const [typedText, setTypedText] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const fullText = "ankitdubey@ad-MacBook-Air ~ % TechStack";
+  const fullText = "annkitdubey@ad-MacBook-Air ~ % TechStack";
 
   const logos = [
     { src: 'https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png', alt: 'Docker Logo' },
@@ -119,7 +119,7 @@ const TechStack = () => {
             Last login: {getCurrentDateTime()} website
           </p>
           <p style={{ fontWeight: 'bold', fontSize: windowWidth < 480 ? '0.8rem' : windowWidth < 768 ? '1rem' : '1.2rem', margin: '0' }}>
-            {typedText.slice(0 , fullText.length-1)}
+          ankitdubey@ad-MacBook-Air ~ % TechStack
           </p>
         </div>
 
