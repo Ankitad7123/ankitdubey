@@ -136,29 +136,51 @@
 // export default Contact;
 
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom';
 import TerminalNavbar from '../components/NavBar';
 import Footer from '../components/Footer';
-import './contact.css'; // Import the updated CSS file
+import './contact.css';
 
 const Contact = () => {
     const [inputValue, setInputValue] = useState("");
-    const navigate = useNavigate(); // Initialize useNavigate
+    const [suggestion, setSuggestion] = useState("");
+    const navigate = useNavigate();
 
-    // Handle input changes and navigate based on the input value
+    // List of suggestions for auto-complete
+    const autoCompleteValues = ["x.com", "gmail", "linkedin"];
+
+    // Handle input changes and provide auto-complete suggestions
     const handleInputChange = (e) => {
         const value = e.target.value;
         setInputValue(value);
 
-        if (value === "x.com" || value === "X.com" || value === "x" || value === "X") {
-            window.location.href = 'https://x.com/ankitd7_';  // Navigate to Twitter if the input is "x.com"
-        } else if (value === "gmail" || value === "Gmail" || value === "GMAIL") {
-            window.location.href = 'mailto:ankit@example.com';
-        } else if (value === "linkedin" || value === "LinkedIn" || value === "LINKEDIN") {
-            window.location.href = 'https://www.linkedin.com/in/ankitdprofile/';
-        } else{
-            window.location.href = 'https://www.linkedin.com/in/ankitdprofile/';
+        // Find a suggestion that matches the input value
+        if (value) {
+            const match = autoCompleteValues.find((suggestion) =>
+                suggestion.toLowerCase().startsWith(value.toLowerCase())
+            );
+            setSuggestion(match ? match : ""); // Set suggestion only if there's a match
+        } else {
+            setSuggestion(""); // Clear suggestion if input is empty
+        }
+    };
 
+    // Handle key press to detect "Enter" and "Tab"
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+            // Trigger action based on the input value
+            if (inputValue.toLowerCase() === "x.com" || inputValue.toLowerCase() === "x") {
+                window.location.href = 'https://x.com/ankitd7_';  // Navigate to X (Twitter)
+            } else if (inputValue.toLowerCase() === "gmail") {
+                window.location.href = 'mailto:ankit@example.com';
+            } else if (inputValue.toLowerCase() === "linkedin") {
+                window.location.href = 'https://www.linkedin.com/in/ankitdprofile/';
+            }
+        } else if (e.key === "Tab" && suggestion) {
+            // Auto-fill the suggestion when Tab is pressed
+            e.preventDefault(); // Prevent the default tab action
+            setInputValue(suggestion); // Fill the input with the suggestion
+            setSuggestion(""); // Clear the suggestion once filled
         }
     };
 
@@ -169,10 +191,10 @@ const Contact = () => {
                 <div className="terminal-box-new">
                     {/* Close buttons */}
                     <div className="close-buttons" style={{ marginTop: "2px", marginLeft: "-3px", marginBottom: "10px" }}>
-            <div className="close-button" data-action="minimize"></div>
-            <div className="close-button" data-action="maximize"></div>
-            <div className="close-button" data-action="close"></div>
-          </div>
+                        <div className="close-button" data-action="minimize"></div>
+                        <div className="close-button" data-action="maximize"></div>
+                        <div className="close-button" data-action="close"></div>
+                    </div>
 
                     {/* Terminal body */}
                     <div className="terminal-content-new">
@@ -189,10 +211,9 @@ const Contact = () => {
                             <a href="mailto:ankit11akhil@gmail.com" target="_blank" rel="noopener noreferrer" className="terminal-link-new">
                                 Gmail
                             </a>
-                            <a href="https://twitter.com/ankitdubey" target="_blank" rel="noopener noreferrer" className="terminal-link-new">
+                            <a href="https://x.com/ankitd7_" target="_blank" rel="noopener noreferrer" className="terminal-link-new">
                                 X.com
                             </a>
-                            
                         </p>
 
                         {/* Terminal command with input field */}
@@ -202,9 +223,16 @@ const Contact = () => {
                                 type="text"
                                 className="input-field-new"
                                 value={inputValue}
-                                onChange={handleInputChange} // Use the handleInputChange function
+                                onChange={handleInputChange}
+                                onKeyDown={handleKeyPress}
+                                placeholder="Type "
                             />
                         </p>
+                        {suggestion && (
+                            <p className="autocomplete-suggestion">
+                                Press: <strong>Tab</strong> to auto complete
+                            </p>
+                        )}
                     </div>
                 </div>
             </div>
