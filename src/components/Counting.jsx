@@ -429,7 +429,7 @@ const Counting = ({ onComplete }) => {
     if (window.innerWidth < 600) {
       return {
         position: 'absolute',
-        top: '-50px',
+        top: '-35px',
         right: '10px',
 
         color:"green",
