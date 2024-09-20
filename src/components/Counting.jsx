@@ -298,6 +298,7 @@ const Counting = ({ onComplete }) => {
   const [isSummaryDone, setIsSummaryDone] = useState(false);
   const [isBlackout, setIsBlackout] = useState(false); // New state for blackout effect
   const navigate = useNavigate(); 
+  const [showSkip, setShowSkip] = useState(true);
 
   const getCurrentDateTime = () => {
     const now = new Date();
@@ -350,6 +351,17 @@ const Counting = ({ onComplete }) => {
   ];
 
   useEffect(() => {
+    // Set a timeout to hide the "skip" instruction after 2 seconds
+    const timer = setTimeout(() => {
+      setShowSkip(true);
+    }, 200);
+
+  
+    // Cleanup the timer on component unmount
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     // Command typing effect
     let commandInterval;
     if (!isCommandsDone) {
@@ -361,7 +373,7 @@ const Counting = ({ onComplete }) => {
           setIsCommandsDone(true);
           clearInterval(commandInterval);
         }
-      }, 1000); // Adjust timing to control how fast commands appear
+      }, 800); // Adjust timing to control how fast commands appear
     }
 
     // Typing effect for the full message after commands are done
@@ -405,12 +417,47 @@ const Counting = ({ onComplete }) => {
       onComplete();
     }
 
+    
+
     return () => {
       clearInterval(commandInterval);
       clearInterval(typingInterval);
       clearInterval(summaryInterval);
     };
   }, [commandIndex, isCommandsDone, isMessageDone, isSummaryDone, summaryIndex, isBlackout, onComplete, navigate]);
+  const getSkipInstructionStyles = () => {
+    if (window.innerWidth < 600) {
+      return {
+        position: 'absolute',
+        top: '-50px',
+        right: '10px',
+
+        color:"green",
+        fontFamily:"monospace",
+        fontSize: '16px', // Adjust for small screens
+      };
+    } else if (window.innerWidth < 900) {
+      return {
+        position: 'absolute',
+        top: '10px',
+        fontFamily:"monospace",
+        right: '14px',
+        color:"green",
+        fontSize: '14px', // Adjust for medium screens
+      };
+    } else {
+      return {
+        
+        position: 'absolute',
+        color:"green",
+        top: '10px',
+        right: '16px',
+        // color: 'gray',
+        fontSize: '21px',
+        fontFamily:"monospace" // Adjust for large screens
+      };
+    }
+  };
 
   return (
     <div className="counting-typing-effect">
@@ -420,10 +467,15 @@ const Counting = ({ onComplete }) => {
             <div className="close-buttons2" style={{marginTop:"50px"}}>
               <div className="close-button" data-action="minimize"></div>
               <div className="close-button" data-action="maximize"></div>
-              <div className="close-button" data-action="close" onClick={()=>{ navigate('/home')}}></div>
+              <div className="close-button" data-action="close" onClick={()=>{ navigate('/home')}}> {showSkip && (
+              <div className="skip-instruction" style={getSkipInstructionStyles()}>
+               skip&#x2193;
+              </div>
+            )}</div>
             </div>
           </div>
           <div className="terminal_big">
+          
       <pre className='pre'
         
       >
