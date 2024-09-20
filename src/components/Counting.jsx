@@ -429,8 +429,8 @@ const Counting = ({ onComplete }) => {
     if (window.innerWidth < 600) {
       return {
         position: 'absolute',
-        top: '-45px',
-        right: '10px',
+        top: '-48px',
+        right: '-5px',
 
         color:"green",
         fontFamily:"monospace",
@@ -439,9 +439,9 @@ const Counting = ({ onComplete }) => {
     } else if (window.innerWidth < 900) {
       return {
         position: 'absolute',
-        top: '10px',
+        top: '-3px',
         fontFamily:"monospace",
-        right: '14px',
+        right: '2px',
         color:"green",
         fontSize: '14px', // Adjust for medium screens
       };
@@ -450,8 +450,8 @@ const Counting = ({ onComplete }) => {
         
         position: 'absolute',
         color:"green",
-        top: '10px',
-        right: '16px',
+        top: '-3px',
+        right: '-4px',
         // color: 'gray',
         fontSize: '21px',
         fontFamily:"monospace" // Adjust for large screens
@@ -469,7 +469,7 @@ const Counting = ({ onComplete }) => {
               <div className="close-button" data-action="maximize"></div>
               <div className="close-button" data-action="close" onClick={()=>{ navigate('/home')}}> {showSkip && (
               <div className="skip-instruction" style={getSkipInstructionStyles()}>
-               skip&#x2193;
+               skip <h5>&#x2193;</h5>
               </div>
             )}</div>
             </div>
