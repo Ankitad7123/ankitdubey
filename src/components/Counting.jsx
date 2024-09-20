@@ -464,7 +464,7 @@ const Counting = ({ onComplete }) => {
       {!isCommandsDone && (
         <div className="terminal-containerbig" >
           <div className="terminal-header_big">
-            <div className="close-buttons2" style={{marginTop:"50px"}}>
+            <div className="close-buttons2" style={{marginTop:"45px"}}>
               <div className="close-button" data-action="minimize"></div>
               <div className="close-button" data-action="maximize"></div>
               <div className="close-button" data-action="close" onClick={()=>{ navigate('/home')}}> {showSkip && (
