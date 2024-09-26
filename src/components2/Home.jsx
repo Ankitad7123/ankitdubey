@@ -30,7 +30,7 @@ const Counting = ({ onComplete }) => {
     "SQL: Managing databases like a pro.",
     "ankitdubey@ad-MacBook-Air ~ % Full-Stack Developer",
     "Full-Stack: End-to-end application expertise.",
-    "ankitdubey@ad-MacBook-Air ~ % echo 'All skills loaded successfully!'",
+    "ankitdubey@ad-MacBook-Air ~ % echo 'All skills loaded!'",
     "Shutting down... 🖥️"
   ];
 
