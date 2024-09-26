@@ -17,20 +17,21 @@ const Counting = ({ onComplete }) => {
   const fullMessage = "Explore My Achievements: Brought to You by Ankit Dubey";
 
   const summary = [
-    `Last login: ${getCurrentDateTime()} my_skills`,
-    "ankitdubey@ad-MacBook-Air ~ % Go",
-    "zsh: command not found: Go",
+    `Last login: ${getCurrentDateTime()} on my_skills`,
+    "ankitdubey@ad-MacBook-Air ~ % echo 'Loading skills...'",
+    "Go: Ready for high-performance concurrency.",
     "ankitdubey@ad-MacBook-Air ~ % Django",
-    "zsh: command not found: Django",
+    "Django: Web development with speed and precision.",
     "ankitdubey@ad-MacBook-Air ~ % React",
-    "zsh: command not found: React",
+    "React: Building dynamic UIs with ease.",
     "ankitdubey@ad-MacBook-Air ~ % Python",
-    "zsh: command not found: Python",
-    "ankitdubey@ad-MacBook-Air ~ % sql",
-    "zsh: command not found: sql",
+    "Python: Versatile, powerful, and efficient.",
+    "ankitdubey@ad-MacBook-Air ~ % SQL",
+    "SQL: Managing databases like a pro.",
     "ankitdubey@ad-MacBook-Air ~ % Full-Stack Developer",
-    "zsh: command not found: Full-Stack Developer",
-    "shutting down..."
+    "Full-Stack: End-to-end application expertise.",
+    "ankitdubey@ad-MacBook-Air ~ % echo 'All skills loaded successfully!'",
+    "Shutting down... 🖥️"
   ];
 
   
